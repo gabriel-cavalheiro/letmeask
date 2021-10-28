@@ -1,7 +1,15 @@
+import './styles/global.scss'
+import { Home } from './pages/Home';
+import { NewRoom } from './pages/NewRoom';
+import { BrowserRouter, Route } from 'react-router-dom';
+
 
 export function App() {
   return (
-    <h1>Hello world</h1>
+    <BrowserRouter>
+     <Route path="/" exact component={Home} /> 
+     <Route path="/rooms/new" component={NewRoom} />
+    </BrowserRouter>
   );
 }
 
